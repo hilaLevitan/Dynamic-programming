@@ -1,7 +1,7 @@
 package dynamicProgramming;
 //there is a matrix full of numbers and the program needs to choose
 //the way that will score the highest score to reach from 0,0 to len-1,len-1 
-//(it can move right-next column,down -next row and diagonally-next column and next row) 
+//(it can move to the right-next column,down -next row and diagonally-next column and next row) 
 
 
 //The recursive way
