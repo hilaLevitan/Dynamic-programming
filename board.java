@@ -13,7 +13,7 @@ public class board {
 			return 0;
 		return Math.max(board(mat,i+1,j),Math.max(board(mat,i,j+1),board(mat,i+1,j+1)))+mat[i][j];
 	}
-	
+//the dynamic way	
 	public static int dynamicBoard(int [][]mat) {
 		//the function will create a matrix that every cell will contain the highest score that can be scored 
 		//from this cell and on.
@@ -52,8 +52,8 @@ public class board {
 	}
 	public static void main(String[] args) {
 		int[][]mat= {{2,0,100,2},
-					 {20,0,30,32},
-					 {39,0,0,10}};
+			     {20,0,30,32},
+			     {39,0,0,10}};
 		
 		System.out.println(board(mat,0,0));
 		System.out.println(dynamicBoard(mat));//returned value: 174
