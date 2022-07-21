@@ -7,14 +7,16 @@ package dynamicProgramming;
 
 public class sequences {
 	
-public static int rec(int n,int k) {		
-	if (n<k)return (int)(Math.pow(2, n));
-	if(n==k)
-		return (int)(Math.pow(2, n))-1;
-	int sum=0;
-	for(int i=n-1;i>=n-k;i--) 
-		sum+=rec(i,k);
-	return sum;
+	public static int rec(int n,int k) {		
+		if (n<k)return (int)(Math.pow(2, n));
+		if(n==k)
+			return (int)(Math.pow(2, n))-1;
+		int sum=0;
+		for(int i=n-1;i>=n-k;i--) 
+			sum+=rec(i,k);
+		return sum;
+	}
+	//n=4, k=3
 	/*
 	1001
 	1010
@@ -23,15 +25,15 @@ public static int rec(int n,int k) {
 	1101
 	1110
 	1111
+	
 	0100
 	0101
 	0110
 	0111
+	
 	0010
 	0011	
 	*/
-	
-}
 	public static int dynamic(int n,int k) {
 		int []arr=new int [n+1];
 		arr[0]=0;
@@ -49,7 +51,7 @@ public static int rec(int n,int k) {
 
 	public static void main(String[] args) {
 		System.out.println(rec(4,3 ));
-		System.out.println(dynamic(4,3 ));
+		System.out.println(dynamic(4,3 ));//output:13
 
 	}
 
